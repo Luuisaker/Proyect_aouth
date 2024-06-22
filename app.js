@@ -75,19 +75,20 @@ passport.deserializeUser(function (user, cb) {
 });
 
 passport.use(new GoogleStrategy({
-    clientID: process.env.Client_ID,
-    clientSecret: process.env.Client_Secret,
-    callbackURL: process.env.Client_URL
-},
-    async function (accessToken, refreshToken, profile, cb) {
-        console.log(profile);
-        try {
-            const user = await Usuario.findOne({ googleId: profile.id }).exec();
-            return cb(null, user);
-        } catch (err) {
-            return cb(err, null);
-        }
-    }));
+  clientID: process.env.Client_ID,
+  clientSecret: process.env.Client_Secret,
+  callbackURL: process.env.Client_URL
+}, async function (accessToken, refreshToken, profile, cb) {
+  console.log(profile);
+  try {
+    await mongoose.connection;
+      
+    const user = await Usuario.findOne({ googleId: profile.id }).exec();
+    return cb(null, user);
+  } catch (err) {
+    return cb(err, null);
+  }
+}));
 app.route("/Login")
     .get(function (req, res) {
         res.render("Login");
