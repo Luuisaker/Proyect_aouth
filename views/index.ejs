@@ -3,6 +3,7 @@
         <head>
         <div style="background-color: rgb(31, 31, 31); padding: 50px 0px 50px 0px; color: white; text-align: center;">
 			<link rel="stylesheet" href="/stylesheets/style.css">
+	    <script src="https://apis.google.com/js/api:client.js"></script>
             <script src="https://www.google.com/recaptcha/api.js?render=6LeC6vQpAAAAAC_8_WSCYXh-T2YXwE8P45VrNcoL"></script>
             <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W5VD3ZV9FN"></script>
@@ -12,6 +13,13 @@
   gtag('js', new Date());
 
   gtag('config', 'G-W5VD3ZV9FN');
+</script>
+<script>
+  window.onbeforeunload = function() {
+    gapi.auth2.getAuthInstance().signOut().then(function() {
+      console.log('User signed out');
+    });
+  };
 </script>
         </head>
         <body>
