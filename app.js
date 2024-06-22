@@ -40,7 +40,6 @@ const client = new mongoose.Mongoose();
 async function run() {
     try {
         await mongoose.connect(uri, {
-            bufferTimeoutMS: 60000
             serverApi: "1"
         });
         await mongoose.connection.db.admin().command({ ping: 1 });
