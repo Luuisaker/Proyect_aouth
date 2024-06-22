@@ -150,7 +150,7 @@ app.route("/contactos")
                 });
             });
         } else {
-            res.render("login");
+            res.render("Login");
         }
     });
 
