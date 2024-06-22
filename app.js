@@ -81,8 +81,7 @@ passport.use(new GoogleStrategy({
 }, async function (accessToken, refreshToken, profile, cb) {
   console.log(profile);
   try {
-    await mongoose.connection;
-      
+    await mongoose.connect(process.env.MONGODB_URI);
     const user = await Usuario.findOne({ googleId: profile.id }).exec();
     return cb(null, user);
   } catch (err) {
