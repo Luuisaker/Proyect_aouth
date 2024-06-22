@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
+<link rel='stylesheet' href='/stylesheets/style.css' />
 		<title>
 			<%= title %>
 		</title>
 	</head>
 	<body>
+<div style="background-color: rgb(31, 31, 31); padding: 50px 0px 50px 0px; color: white; text-align: center;">
 		<h1>Registros</h1>
 		<table>
 			<thead>
@@ -51,5 +53,6 @@
 				<% } %>
 			</tbody>
 		</table>
-	</body>
+	<%- include('partials/footer'); -%>
+</body>
 </html>
