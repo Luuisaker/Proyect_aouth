@@ -1,0 +1,46 @@
+<head>
+<script src="https://www.google.com/recaptcha/api.js?render=6LeC6vQpAAAAAC_8_WSCYXh-T2YXwE8P45VrNcoL"></script>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<%- include('partials/header'); -%>
+	<div style="background-color: rgb(31, 31, 31); padding: 50px 0px 50px 0px; color: white; text-align: center;">
+		
+		<h1 id="tit">Formulario</h1>
+		
+		<form action="/register" id="zas" method="post">
+			<div>
+				<label id="name" for="" name="Nombre:">Nombre:</label>
+
+				<input id="nam" type="text" name="name">
+                   </div>
+			<br>
+				<div>
+					<label id="email" for="" name="Email:">Email:</label>
+
+					<input id="ema" type="email" name="email">
+                     </div>
+				<br>
+					<div>
+						<label id="coment" for="" name="Comentario::">Comentario:</label>
+						<input id="comenta" type="text" name="coment">
+                  </div>
+					<br>
+						<div>
+							<script>
+								function onClick(e) {
+								e.preventDefault();
+								grecaptcha.ready(function() {
+								grecaptcha.execute('6LeC6vQpAAAAAC_8_WSCYXh-T2YXwE8P45VrNcoL', {action: 'submit'}).then(function(token) {
+								});
+								});
+								}
+							</script>
+						</div>
+
+							<button id="reg-submit">Registrar</button>
+
+						</form>
+		<div>
+		</div>
+		</div>
+<%- include('partials/footer'); -%>

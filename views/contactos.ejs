@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			<%= title %>
+		</title>
+	</head>
+	<body>
+		<h1>Registros</h1>
+		<table>
+			<thead>
+				<tr>
+					
+					<th>Nombre</th>
+					<th>Correo</th>
+					<th>Comentario</th>
+					<th>IP</th>
+					<th>Fecha</th>
+					<th>Pais</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% if (records) { %>
+				<% records.forEach(function(record) { %>
+				<tr>
+					
+					<td>
+						<%= record.Nombre %>
+						</td>
+					<td>
+						<%= record.Correo %>
+						</td>
+					<td>
+						<%= record.Comentario %>
+						</td>
+					<td>
+						<%= record.IP %>
+						</td>
+					<td>
+						<%= record.Fecha %>
+						</td>
+					<td>
+						<%= record.Locacion %>
+						</td>
+				</tr>
+				<% }); %>
+				<% } else { %>
+				<tr>
+					<td colspan="3">No records found.</td>
+				</tr>
+				<% } %>
+			</tbody>
+		</table>
+	</body>
+</html>

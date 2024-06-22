@@ -1,0 +1,45 @@
+<%- include('partials/header'); -%>
+<div style="background-color: rgb(31, 31, 31); padding: 50px 0px 50px 0px; color: white; text-align: center;">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      /* add your styles here */
+    </style>
+  </head>
+  <body>
+    <div class="f" >
+      <img src="images/photo.jpeg"  style="width: 200px; height: 200px;;/>
+      </div>
+        <div class="contact-form"> 
+          <h1 class="contact-form__h1"><%= Name%> <%= Lastname %></h1>
+          
+        </div>
+        <p id="datos">Datos de contacto</p>
+        <div class="contact-form">
+          <p class="contact-form__p">*Telefono: <%= Phone %></p>
+          <p class="contact-form__p">*Correo: <%= Mail %></p>
+          <p id="datos_2">Formaci&oacuten acad&eacutemica</p>
+          <p id="es" class="contact-form__p">*Primaria (2017)</p>
+          <p id="es" class="contact-form__p">*Secundaria (2022)</p>
+          <p id="es" class="contact-form__p"><%= School %></p>
+          <p id="datos_3">Sobre Mi</p>
+          <p id="info" class="contact-form__p">Estudiante de Ingenier&iacutea en Sistemas con pasi&oacuten por la tecnolog&iacutea y el desarrollo de software. Busco aplicar mis conocimientos en proyectos desafiantes y contribuir al crecimiento de una empresa innovadora.</p>
+          <p id="datos_5">Redes</p>
+          <p id="r" class="contact-form__p">Github.com/Luuisaker</p>
+        </div>
+        <p id="datos_4" class="contact-form__p">Habilidades y destrezas</p>
+        <p id="h" class="contact-form__p">*Lenguajes de Programaci&oacuten: Python, Java, C++</p>
+        <p id="h" class="contact-form__p">*Desarrollo Web: HTML, CSS, JavaScript</p>
+        <p id="h" class="contact-form__p">*Herramientas de Desarrollo: Visual Studio Code, Git</p>
+        <p id="datos_6" class="contact-form__p">Experiencia Laboral</p>
+        <p id="lav" class="contact-form__p">*T&eacutecnico de Mantenimiento y Reparaci&oacuten de Computadoras (Trabajo Aut&oacutenomo)</p>
+        <p id="lav" class="contact-form__p">Durante este per&iacuteodo, he brindado servicios de mantenimiento y reparaci&oacuten de computadoras de manera independiente. He solucionado problemas de hardware y software, realizado actualizaciones y optimizado el rendimiento de sistemas inform&aacuteticos para clientes particulares. Mi enfoque se ha centrado en ofrecer soluciones eficientes y confiables para garantizar el funcionamiento &oacuteptimo de los equipos.</p>
+      </div>
+    </div>
+  </body>
+</html>
+<%- include('partials/footer'); -%>

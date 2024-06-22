@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registros</title>
+</head>
+<body>
+    <h1>Registros del formulario</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Comentario</th>
+                <th>IP</th>
+                <th>Fecha</th>
+                <th>Locación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% datos.forEach(dato => { %>
+            <tr>
+                <td><%= dato.Nombre %></td>
+                <td><%= dato.Correo %></td>
+                <td><%= dato.Comentario %></td>
+                <td><%= dato.IP %></td>
+                <td><%= dato.Fecha %></td>
+                <td><%= dato.Locacion %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
