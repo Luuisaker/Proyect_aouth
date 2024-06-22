@@ -53,11 +53,6 @@
 				<% } %>
 			</tbody>
 		</table>
- <script>
-      window.addEventListener('beforeunload', () => {
-        gapi.auth2.GoogleAuth.signOut();
-      });
-    </script>
 	<%- include('partials/footer'); -%>
 </body>
 </html>
